@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube/API.dart';
-
+import 'package:youtube/model/Videos.dart';
 
 class Inicio extends StatefulWidget {
   @override
@@ -8,16 +8,16 @@ class Inicio extends StatefulWidget {
 }
 
 class _InicioState extends State<Inicio> {
- 
+  _listarVideos() {
+   
+    Api api = Api();
+    return api.pesquisar("");
+  }
+
   @override
   Widget build(BuildContext context) {
-      Api api = Api();
-      api.pesquisar(""); 
-
-     return Container(child: Center(
-      child: Text("Inicio"),
-    ),
-      
-    );
+    return FutureBuilder<List<Videos>>(
+      future:  _listarVideos(),
+      builder: null);
   }
 }

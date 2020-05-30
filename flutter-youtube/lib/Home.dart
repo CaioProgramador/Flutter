@@ -35,7 +35,9 @@ Biblioteca(),
           IconButton(icon: Icon(Icons.account_box), onPressed: () {}),
         ],
       ),
-      body:  telas[_index],
+      body:  Container(
+        padding: EdgeInsets.all(16),
+        child: telas[_index]),
       
       bottomNavigationBar: BottomNavigationBar(
           onTap: (index) {

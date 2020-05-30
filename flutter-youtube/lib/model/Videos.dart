@@ -9,7 +9,7 @@ class Videos {
 
   factory Videos.fromJason(Map<String, dynamic> json) {
     return Videos(
-      id: json["id"]["videoId"],
+        id: json["id"]["videoId"],
       titulo: json["snippet"]["title"],
       imagem: json["snippet"]["thumbnails"]["high"]["url"],
       canal: json["snippet"]["channelId"],
